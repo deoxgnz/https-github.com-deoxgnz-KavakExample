@@ -11,7 +11,7 @@ public enum ColorStyle: Int {
     case KVKRed             //4
     case KVKGray            //5
     case KVKGnomeBG         //6
-    //case KVK
+    case KVKCell            //7
     
     public var color : UIColor {
         switch self {
@@ -29,15 +29,13 @@ public enum ColorStyle: Int {
                 return .KVKGray
             case .KVKGnomeBG:
                 return .KVKGnomeBG
-        //@unknown default:
+            case .KVKCell:
+                return .KVKCell
         }
     }
     
     static public func colorWith(value: Int) -> UIColor {
-        if let color = ColorStyle(rawValue: value)?.color {
-            return color
-        }
-        return .clear
+        return ColorStyle(rawValue: value)?.color ?? UIColor.clear
     }
     static public func colorWith(value: String) -> UIColor {
         switch value.lowercased() {
@@ -53,8 +51,10 @@ public enum ColorStyle: Int {
                 return colorWith(value: ColorStyle.KVKRed.rawValue)
             case "gray":
                 return colorWith(value: ColorStyle.KVKGray.rawValue)
-            case "gnomeBG ":
+            case "gnomebg":
                 return colorWith(value: ColorStyle.KVKGnomeBG.rawValue)
+            case "cell":
+                return colorWith(value: ColorStyle.KVKCell.rawValue)
             default:
                 return .clear
         }
@@ -126,18 +126,15 @@ public extension UIColor {
             }
         }
     }
-    
-    static var KVK: UIColor{
+    static var KVKCell: UIColor{
         get{
             if #available(iOS 11.0, *) {
-                return UIColor(named: "KVK") ?? UIColor.clear
+                return UIColor(named: "KVKCell") ?? UIColor.clear
             } else {
-                return UIColor.get()
+                return UIColor.getKVKCell()
             }
         }
     }
-    
-    
     
     static func getKVKPink() -> UIColor{
         return UIColor(red   : 255.0 / 255.0,
@@ -164,16 +161,15 @@ public extension UIColor {
                        alpha :   1.0)
     }
     static func getGnomeBG() -> UIColor{
-        return UIColor(red   : 254.0 / 255.0,
-                       green : 249.0 / 255.0,
-                       blue  : 226.0 / 255.0,
+        return UIColor(red   : 255.0 / 255.0,
+                       green : 255.0 / 255.0,
+                       blue  : 240.0 / 255.0,
                        alpha :   1.0)
     }
-    
-    static func get() -> UIColor{
-        return UIColor(red   :  39.0 / 255.0,
-                       green : 130.0 / 255.0,
-                       blue  :  82.0 / 255.0,
+    static func getKVKCell() -> UIColor{
+        return UIColor(red   : 250.0 / 255.0,
+                       green : 235.0 / 255.0,
+                       blue  : 215.0 / 255.0,
                        alpha :   1.0)
     }
 }

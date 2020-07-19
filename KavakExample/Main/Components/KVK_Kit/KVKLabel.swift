@@ -46,6 +46,16 @@ open class KVKLabel: UILabel{
             backgroundColor = ColorStyle.colorWith(value: backgroundColorCode)
         }
     }
+    @IBInspectable public var adjustMinimumScaleFactor : CGFloat = 1.0 {
+        didSet{
+            self.minimumScaleFactor = adjustMinimumScaleFactor
+        }
+    }
+    @IBInspectable public var adjustFontSizeToFitWidth : Bool = false {
+        didSet{
+            self.adjustsFontSizeToFitWidth = adjustFontSizeToFitWidth
+        }
+    }
     open override func tintColorDidChange() {
         layer.borderColor = ColorStyle.colorWith(value: borderColor).cgColor
     }
@@ -107,13 +117,13 @@ open class KVKLabel: UILabel{
         self.font = UIFont.systemFont(ofSize: 28.0, weight: .medium)
     }
     public func setBody1Style() { //5
-        self.font = UIFont.systemFont(ofSize: 18.0, weight: .regular)
-    }
-    public func setBody2Style() { //6
         self.font = UIFont.systemFont(ofSize: 16.0, weight: .regular)
     }
-    public func setBody3Style() { //7
+    public func setBody2Style() { //6
         self.font = UIFont.systemFont(ofSize: 14.0, weight: .regular)
+    }
+    public func setBody3Style() { //7
+        self.font = UIFont.systemFont(ofSize: 12.0, weight: .regular)
     }
     public func setH1BoldStyle() { //8
         self.font = UIFont.systemFont(ofSize: 55.0, weight: .bold)

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9552258324C4BD9F0054429A /* KVKMosaicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9552258124C4BD9F0054429A /* KVKMosaicCell.swift */; };
+		9552258424C4BD9F0054429A /* KVKMosaicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9552258224C4BD9F0054429A /* KVKMosaicCell.xib */; };
+		95CEABE824C40EEA00421AEE /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CEABE724C40EEA00421AEE /* TestTableViewController.swift */; };
 		95E77B8F24C159300069EB8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E77B8E24C159300069EB8C /* AppDelegate.swift */; };
 		95E77B9124C159300069EB8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E77B9024C159300069EB8C /* SceneDelegate.swift */; };
 		95E77B9324C159300069EB8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E77B9224C159300069EB8C /* ViewController.swift */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9552258124C4BD9F0054429A /* KVKMosaicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVKMosaicCell.swift; sourceTree = "<group>"; };
+		9552258224C4BD9F0054429A /* KVKMosaicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KVKMosaicCell.xib; sourceTree = "<group>"; };
+		95CEABE724C40EEA00421AEE /* TestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
 		95E77B8B24C159300069EB8C /* KavakExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KavakExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95E77B8E24C159300069EB8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95E77B9024C159300069EB8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,11 +118,38 @@
 		95E77BA824C160250069EB8C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				95E77BB024C3781C0069EB8C /* KVK_Kit */,
+				95E77BB524C37F850069EB8C /* Views */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		95E77BAF24C378030069EB8C /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				9552258124C4BD9F0054429A /* KVKMosaicCell.swift */,
+				9552258224C4BD9F0054429A /* KVKMosaicCell.xib */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		95E77BB024C3781C0069EB8C /* KVK_Kit */ = {
+			isa = PBXGroup;
+			children = (
 				95E77BA924C16C4C0069EB8C /* KVKColor.swift */,
 				95E77BAB24C178C30069EB8C /* KVKLabel.swift */,
 				95E77BAD24C3696B0069EB8C /* KVKView.swift */,
+				95CEABE724C40EEA00421AEE /* TestTableViewController.swift */,
 			);
-			path = Components;
+			path = KVK_Kit;
+			sourceTree = "<group>";
+		};
+		95E77BB524C37F850069EB8C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				95E77BAF24C378030069EB8C /* TableViewCells */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +213,7 @@
 				95E77B9B24C159310069EB8C /* LaunchScreen.storyboard in Resources */,
 				95E77B9824C159310069EB8C /* Assets.xcassets in Resources */,
 				95E77B9624C159300069EB8C /* Main.storyboard in Resources */,
+				9552258424C4BD9F0054429A /* KVKMosaicCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +225,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				95E77BA724C15C8D0069EB8C /* Gnome.swift in Sources */,
+				95CEABE824C40EEA00421AEE /* TestTableViewController.swift in Sources */,
+				9552258324C4BD9F0054429A /* KVKMosaicCell.swift in Sources */,
 				95E77B9324C159300069EB8C /* ViewController.swift in Sources */,
 				95E77BAE24C3696B0069EB8C /* KVKView.swift in Sources */,
 				95E77B8F24C159300069EB8C /* AppDelegate.swift in Sources */,

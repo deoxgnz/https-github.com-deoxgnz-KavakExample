@@ -37,26 +37,26 @@ public enum ColorStyle: Int {
     static public func colorWith(value: Int) -> UIColor {
         return ColorStyle(rawValue: value)?.color ?? UIColor.clear
     }
-    static public func colorWith(value: String) -> UIColor {
+    static public func colorWith(stringValue value: String) -> Int {
         switch value.lowercased() {
             case "black":
-                return .black
+                return ColorStyle.KVKBlackSystem.rawValue
             case "white":
-                return .white
+                return ColorStyle.KVKWhiteSystem.rawValue
             case "pink":
-                return colorWith(value: ColorStyle.KVKPink.rawValue)
+                return ColorStyle.KVKPink.rawValue
             case "green":
-                return colorWith(value: ColorStyle.KVKGreen.rawValue)
+                return ColorStyle.KVKGreen.rawValue
             case "red":
-                return colorWith(value: ColorStyle.KVKRed.rawValue)
+                return ColorStyle.KVKRed.rawValue
             case "gray":
-                return colorWith(value: ColorStyle.KVKGray.rawValue)
+                return ColorStyle.KVKGray.rawValue
             case "gnomebg":
-                return colorWith(value: ColorStyle.KVKGnomeBG.rawValue)
+                return ColorStyle.KVKGnomeBG.rawValue
             case "cell":
-                return colorWith(value: ColorStyle.KVKCell.rawValue)
+                return ColorStyle.KVKCell.rawValue
             default:
-                return .clear
+                return -1
         }
     }
 }
@@ -84,7 +84,7 @@ public extension UIColor {
     static var KVKPink: UIColor{
         get{
             if #available(iOS 11.0, *) {
-                return UIColor(named: "KVKBPink") ?? UIColor.clear
+                return UIColor(named: "KVKPink") ?? UIColor.clear
             } else {
                 return UIColor.getKVKPink()
             }

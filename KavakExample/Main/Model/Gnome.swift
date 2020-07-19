@@ -5,37 +5,27 @@
 import Foundation
 
 struct Gnome: Codable {
-    let iId            : Int
-    let iAge           : Int
-    let bFavorite      : Bool
-    let dWeight        : Double
-    let dHeight        : Double
-    let strName        : String
-    let strHairColor   : String
-    let strThumbnail   : String?
-    let arrFriends     : [String]?
-    let arrProfessions : [String]?
+    var iId            : Int
+    var iAge           : Int
+    var bFavorite      : Bool
+    var dWeight        : Double
+    var dHeight        : Double
+    var strName        : String
+    var strHairColor   : String
+    var strThumbnail   : String?
+    var arrFriends     : [String]?
+    var arrProfessions : [String]?
+    
+    init() {
+        iId = -1
+        iAge = 0
+        bFavorite = false
+        dWeight = 0
+        dHeight = 0
+        strName = ""
+        strHairColor = ""
+        strThumbnail = nil
+        arrFriends = nil
+        arrProfessions = nil
+    }
 }
-/*
-{
-  "id": 0,
-  "name": "Tobus Quickwhistle",
-  "thumbnail": "http://www.publicdomainpictures.net/pictures/10000/nahled/thinking-monkey-11282237747K8xB.jpg",
-  "age": 306,
-  "weight": 39.065952,
-  "height": 107.75835,
-  "hair_color": "Pink",
-  "professions": [
-    "Metalworker",
-    "Woodcarver",
-    "Stonecarver",
-    " Tinker",
-    "Tailor",
-    "Potter"
-  ],
-  "friends": [
-    "Cogwitz Chillwidget",
-    "Tinadette Chillbuster"
-  ]
-},
-*/

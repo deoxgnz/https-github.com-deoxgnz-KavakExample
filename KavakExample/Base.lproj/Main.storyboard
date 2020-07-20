@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svX-9T-t1I" customClass="KVKLabel" customModule="KavakExample" customModuleProvider="target">
-                                <rect key="frame" x="16" y="52" width="343" height="67"/>
+                                <rect key="frame" x="16" y="52" width="343" height="41"/>
                                 <string key="text">Welcome to
 Brastlewark</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -32,17 +32,44 @@ Brastlewark</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="JG6-GR-Vic">
+                                <rect key="frame" x="0.0" y="101" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xbf-vi-qJY">
+                                <rect key="frame" x="0.0" y="157" width="375" height="510"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ds3-sh-wQh">
+                                <rect key="frame" x="152.5" y="377" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="DoE-YX-PYR"/>
+                                    <constraint firstAttribute="width" constant="70" id="jO4-mi-LoK"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" name="KVKGnomeBG"/>
                         <constraints>
+                            <constraint firstItem="xbf-vi-qJY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0dp-yD-W4L"/>
+                            <constraint firstItem="JG6-GR-Vic" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="84G-Q0-EfQ"/>
+                            <constraint firstItem="JG6-GR-Vic" firstAttribute="top" secondItem="svX-9T-t1I" secondAttribute="bottom" constant="8" id="92w-n3-zce"/>
+                            <constraint firstItem="ds3-sh-wQh" firstAttribute="centerY" secondItem="xbf-vi-qJY" secondAttribute="centerY" id="Jjo-O3-Qf4"/>
+                            <constraint firstItem="JG6-GR-Vic" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="L3q-rA-TSb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xbf-vi-qJY" secondAttribute="bottom" id="ZY2-Mf-QUv"/>
+                            <constraint firstItem="ds3-sh-wQh" firstAttribute="centerX" secondItem="xbf-vi-qJY" secondAttribute="centerX" id="cSY-7Q-eb5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xbf-vi-qJY" secondAttribute="trailing" id="dln-Mz-rTf"/>
                             <constraint firstItem="svX-9T-t1I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="hvg-Ec-Tvb"/>
                             <constraint firstItem="svX-9T-t1I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="kIU-73-ltw"/>
+                            <constraint firstItem="xbf-vi-qJY" firstAttribute="top" secondItem="JG6-GR-Vic" secondAttribute="bottom" id="xJz-9N-iyT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="svX-9T-t1I" secondAttribute="trailing" constant="16" id="xgK-ET-6xU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="60U-bx-1Az"/>
                     <connections>
+                        <outlet property="gnomeTbl" destination="xbf-vi-qJY" id="g3t-fm-mCg"/>
+                        <outlet property="indicator" destination="ds3-sh-wQh" id="luU-3l-evY"/>
+                        <outlet property="srcBar" destination="JG6-GR-Vic" id="1ZF-Ss-EdZ"/>
                         <segue destination="2fZ-Zi-tb5" kind="show" identifier="segueToGnomeList" id="LZh-XC-k4j"/>
                     </connections>
                 </viewController>

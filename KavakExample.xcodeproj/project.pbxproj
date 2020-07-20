@@ -89,24 +89,8 @@
 			children = (
 				95E77BA824C160250069EB8C /* Components */,
 				95E77BA524C15B770069EB8C /* Model */,
-				95E77BA424C15B710069EB8C /* View */,
-				95E77BA324C15B670069EB8C /* ViewModel */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		95E77BA324C15B670069EB8C /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		95E77BA424C15B710069EB8C /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		95E77BA524C15B770069EB8C /* Model */ = {

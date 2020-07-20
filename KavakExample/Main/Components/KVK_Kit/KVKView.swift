@@ -14,7 +14,11 @@ open class KVKView: UIView {
         case optionView     //2
     }
     @IBInspectable public var style           : Int = 0
-    @IBInspectable public var backgroundCode  : Int = 6
+    @IBInspectable public var backgroundCode  : Int = 6 {
+        didSet{
+            setBackground()
+        }
+    }
     @IBInspectable public var borderColorCode : Int = 6
     public func setBackground(){
         backgroundColor = ColorStyle.colorWith(value: backgroundCode)
@@ -46,14 +50,6 @@ open class KVKView: UIView {
     open override func layoutSubviews() {
         super.layoutSubviews()
         setBackground()
-    }
-    
-    open override var backgroundColor: UIColor? {
-        didSet {
-            if backgroundColor != ColorStyle.colorWith(value: backgroundCode) {
-                backgroundColor = ColorStyle.colorWith(value: backgroundCode)
-            }
-        }
     }
 }
 

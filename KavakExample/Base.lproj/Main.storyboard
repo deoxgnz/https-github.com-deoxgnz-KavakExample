@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svX-9T-t1I" customClass="KVKLabel" customModule="KavakExample" customModuleProvider="target">
-                                <rect key="frame" x="16" y="76" width="343" height="41"/>
+                                <rect key="frame" x="16" y="52" width="343" height="67"/>
                                 <string key="text">Welcome to
 Brastlewark</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -25,32 +25,19 @@ Brastlewark</string>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="styleType">
-                                        <integer key="value" value="1"/>
+                                        <integer key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="aligmentText">
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ah-EN-XLT">
-                                <rect key="frame" x="152.5" y="522" width="70" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="Var-70-tQ3"/>
-                                    <constraint firstAttribute="height" constant="70" id="gqq-hX-vcO"/>
-                                </constraints>
-                                <state key="normal" title="NEXT"/>
-                                <connections>
-                                    <action selector="nextAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wbf-9z-mgI"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" name="KVKGnomeBG"/>
                         <constraints>
-                            <constraint firstItem="1Ah-EN-XLT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PuN-Rj-NVs"/>
-                            <constraint firstItem="svX-9T-t1I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="hvg-Ec-Tvb"/>
+                            <constraint firstItem="svX-9T-t1I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="hvg-Ec-Tvb"/>
                             <constraint firstItem="svX-9T-t1I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="kIU-73-ltw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="svX-9T-t1I" secondAttribute="trailing" constant="16" id="xgK-ET-6xU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1Ah-EN-XLT" secondAttribute="bottom" constant="75" id="yC7-64-hQ1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

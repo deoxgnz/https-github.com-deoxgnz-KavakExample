@@ -23,13 +23,71 @@
                                 <rect key="frame" x="0.0" y="0.0" width="160" height="142"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Byh-3P-d6x" customClass="KVKView" customModule="KavakExample" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="10" width="140" height="122"/>
+                                        <rect key="frame" x="8" y="8" width="144" height="126"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="J0k-GA-yRa">
-                                                <rect key="frame" x="36.5" y="5" width="67" height="65.5"/>
+                                                <rect key="frame" x="44.5" y="5" width="55" height="55"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHK-mH-d6p" customClass="KVKLabel" customModule="KavakExample" customModuleProvider="target">
-                                                <rect key="frame" x="5" y="78.5" width="130" height="0.0"/>
+                                                <rect key="frame" x="5" y="68" width="134" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="styleType">
+                                                        <integer key="value" value="6"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="aligmentText">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="colorTextCode">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oxh-JF-hOv" customClass="KVKLabel" customModule="KavakExample" customModuleProvider="target">
+                                                <rect key="frame" x="5" y="73" width="134" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="styleType">
+                                                        <integer key="value" value="6"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="aligmentText">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="colorTextCode">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOJ-Am-xel" customClass="KVKView" customModule="KavakExample" customModuleProvider="target">
+                                                <rect key="frame" x="5" y="101" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="4a1-Y7-S3d"/>
+                                                    <constraint firstAttribute="height" constant="20" id="M5q-Me-wgb"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iiO-3H-7EM" customClass="KVKLabel" customModule="KavakExample" customModuleProvider="target">
+                                                <rect key="frame" x="33" y="101" width="103" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="styleType">
+                                                        <integer key="value" value="6"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="aligmentText">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="colorTextCode">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xf-lu-EaK" customClass="KVKLabel" customModule="KavakExample" customModuleProvider="target">
+                                                <rect key="frame" x="5" y="78" width="134" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -49,46 +107,28 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="adjustFontSizeToFitWidth" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOJ-Am-xel" customClass="KVKView" customModule="KavakExample" customModuleProvider="target">
-                                                <rect key="frame" x="5" y="97" width="20" height="20"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="20" id="4a1-Y7-S3d"/>
-                                                    <constraint firstAttribute="height" constant="20" id="M5q-Me-wgb"/>
-                                                </constraints>
-                                            </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iiO-3H-7EM" customClass="KVKLabel" customModule="KavakExample" customModuleProvider="target">
-                                                <rect key="frame" x="33" y="97" width="99" height="20"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="styleType">
-                                                        <integer key="value" value="6"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="aligmentText">
-                                                        <integer key="value" value="0"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="colorTextCode">
-                                                        <integer key="value" value="0"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
+                                            <constraint firstItem="aOJ-Am-xel" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4xf-lu-EaK" secondAttribute="top" constant="5" id="11y-SF-C4x"/>
                                             <constraint firstItem="J0k-GA-yRa" firstAttribute="centerX" secondItem="Byh-3P-d6x" secondAttribute="centerX" id="58t-5h-Tl6"/>
                                             <constraint firstAttribute="trailing" secondItem="WHK-mH-d6p" secondAttribute="trailing" constant="5" id="6Ab-ev-cDC"/>
                                             <constraint firstItem="iiO-3H-7EM" firstAttribute="centerY" secondItem="aOJ-Am-xel" secondAttribute="centerY" id="8Za-dF-ubq"/>
+                                            <constraint firstItem="4xf-lu-EaK" firstAttribute="leading" secondItem="Byh-3P-d6x" secondAttribute="leading" constant="5" id="CCQ-Ol-TfW"/>
+                                            <constraint firstItem="Oxh-JF-hOv" firstAttribute="top" secondItem="WHK-mH-d6p" secondAttribute="bottom" constant="5" id="D01-2Z-Jzb"/>
                                             <constraint firstItem="iiO-3H-7EM" firstAttribute="height" secondItem="aOJ-Am-xel" secondAttribute="height" id="D1E-qR-6FO"/>
                                             <constraint firstItem="iiO-3H-7EM" firstAttribute="leading" secondItem="aOJ-Am-xel" secondAttribute="trailing" constant="8" id="GUn-2p-J7D"/>
+                                            <constraint firstItem="Oxh-JF-hOv" firstAttribute="leading" secondItem="Byh-3P-d6x" secondAttribute="leading" constant="5" id="H8d-Bp-4eV"/>
                                             <constraint firstItem="aOJ-Am-xel" firstAttribute="leading" secondItem="Byh-3P-d6x" secondAttribute="leading" constant="5" id="R5d-cV-B0m"/>
                                             <constraint firstAttribute="trailing" secondItem="iiO-3H-7EM" secondAttribute="trailing" constant="8" id="SLY-Ea-N5U"/>
                                             <constraint firstItem="WHK-mH-d6p" firstAttribute="leading" secondItem="Byh-3P-d6x" secondAttribute="leading" constant="5" id="TyJ-uL-KF4"/>
-                                            <constraint firstAttribute="width" secondItem="J0k-GA-yRa" secondAttribute="height" multiplier="32:15" id="Wpi-rR-JyA"/>
                                             <constraint firstItem="WHK-mH-d6p" firstAttribute="top" secondItem="J0k-GA-yRa" secondAttribute="bottom" constant="8" id="bQ9-bt-lBD"/>
-                                            <constraint firstItem="J0k-GA-yRa" firstAttribute="width" secondItem="Byh-3P-d6x" secondAttribute="height" multiplier="6:11" id="geD-Ol-wn6"/>
                                             <constraint firstItem="J0k-GA-yRa" firstAttribute="top" secondItem="Byh-3P-d6x" secondAttribute="top" constant="5" id="h6F-5D-hwM"/>
-                                            <constraint firstItem="aOJ-Am-xel" firstAttribute="top" relation="greaterThanOrEqual" secondItem="WHK-mH-d6p" secondAttribute="bottom" constant="5" id="hk9-Yg-dST"/>
+                                            <constraint firstItem="J0k-GA-yRa" firstAttribute="width" secondItem="Byh-3P-d6x" secondAttribute="height" multiplier="55:126" id="iOX-Hk-InK"/>
+                                            <constraint firstAttribute="trailing" secondItem="Oxh-JF-hOv" secondAttribute="trailing" constant="5" id="jmb-u3-51r"/>
+                                            <constraint firstAttribute="trailing" secondItem="4xf-lu-EaK" secondAttribute="trailing" constant="5" id="lrw-zf-SP8"/>
+                                            <constraint firstItem="4xf-lu-EaK" firstAttribute="top" secondItem="Oxh-JF-hOv" secondAttribute="bottom" constant="5" id="pOu-YE-Xjs"/>
+                                            <constraint firstAttribute="width" secondItem="J0k-GA-yRa" secondAttribute="height" multiplier="144:55" id="pbm-gn-Krr"/>
                                             <constraint firstAttribute="bottom" secondItem="aOJ-Am-xel" secondAttribute="bottom" constant="5" id="rNS-fQ-NJ4"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
@@ -102,10 +142,10 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Byh-3P-d6x" firstAttribute="leading" secondItem="Cce-JV-16f" secondAttribute="leading" constant="10" id="2WH-AX-j8c"/>
-                                    <constraint firstAttribute="bottom" secondItem="Byh-3P-d6x" secondAttribute="bottom" constant="10" id="Ipt-yH-ti3"/>
-                                    <constraint firstAttribute="trailing" secondItem="Byh-3P-d6x" secondAttribute="trailing" constant="10" id="Kvg-mH-zFi"/>
-                                    <constraint firstItem="Byh-3P-d6x" firstAttribute="top" secondItem="Cce-JV-16f" secondAttribute="top" constant="10" id="wnz-cr-mFj"/>
+                                    <constraint firstItem="Byh-3P-d6x" firstAttribute="leading" secondItem="Cce-JV-16f" secondAttribute="leading" constant="8" id="2WH-AX-j8c"/>
+                                    <constraint firstAttribute="bottom" secondItem="Byh-3P-d6x" secondAttribute="bottom" constant="8" id="Ipt-yH-ti3"/>
+                                    <constraint firstAttribute="trailing" secondItem="Byh-3P-d6x" secondAttribute="trailing" constant="8" id="Kvg-mH-zFi"/>
+                                    <constraint firstItem="Byh-3P-d6x" firstAttribute="top" secondItem="Cce-JV-16f" secondAttribute="top" constant="8" id="wnz-cr-mFj"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="backgroundCode">
@@ -117,13 +157,13 @@
                                 <rect key="frame" x="160" y="0.0" width="160" height="142"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIa-16-P9k" customClass="KVKView" customModule="KavakExample" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="10" width="140" height="122"/>
+                                        <rect key="frame" x="8" y="8" width="144" height="126"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="zvc-wO-YQd">
-                                                <rect key="frame" x="36.5" y="5" width="67" height="65.5"/>
+                                                <rect key="frame" x="44.5" y="5" width="55" height="55"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wa6-eY-nVB" customClass="KVKLabel" customModule="KavakExample" customModuleProvider="target">
-                                                <rect key="frame" x="5" y="78.5" width="130" height="0.0"/>
+                                                <rect key="frame" x="5" y="68" width="134" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -143,8 +183,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MuR-Of-FH9" customClass="KVKLabel" customModule="KavakExample" customModuleProvider="target">
-                                                <rect key="frame" x="33" y="97" width="99" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mR9-G7-adt" customClass="KVKLabel" customModule="KavakExample" customModuleProvider="target">
+                                                <rect key="frame" x="5" y="73" width="134" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -161,26 +201,70 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Nq-pp-VVN" customClass="KVKView" customModule="KavakExample" customModuleProvider="target">
-                                                <rect key="frame" x="5" y="97" width="20" height="20"/>
+                                                <rect key="frame" x="5" y="101" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="5kJ-2f-2hv"/>
                                                     <constraint firstAttribute="height" constant="20" id="G9k-nR-12w"/>
                                                 </constraints>
                                             </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MuR-Of-FH9" customClass="KVKLabel" customModule="KavakExample" customModuleProvider="target">
+                                                <rect key="frame" x="33" y="101" width="103" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="styleType">
+                                                        <integer key="value" value="6"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="aligmentText">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="colorTextCode">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoA-kD-7UU" customClass="KVKLabel" customModule="KavakExample" customModuleProvider="target">
+                                                <rect key="frame" x="5" y="78" width="134" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="styleType">
+                                                        <integer key="value" value="6"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="aligmentText">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="colorTextCode">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="adjustMinimumScaleFactor">
+                                                        <real key="value" value="0.75"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="adjustFontSizeToFitWidth" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="MoA-kD-7UU" secondAttribute="trailing" constant="5" id="5gY-4Q-6Dv"/>
                                             <constraint firstItem="zvc-wO-YQd" firstAttribute="top" secondItem="fIa-16-P9k" secondAttribute="top" constant="5" id="7sV-wI-OSU"/>
                                             <constraint firstAttribute="trailing" secondItem="MuR-Of-FH9" secondAttribute="trailing" constant="8" id="7wd-yd-34i"/>
                                             <constraint firstItem="wa6-eY-nVB" firstAttribute="leading" secondItem="fIa-16-P9k" secondAttribute="leading" constant="5" id="HuW-QA-EJx"/>
-                                            <constraint firstItem="zvc-wO-YQd" firstAttribute="width" secondItem="fIa-16-P9k" secondAttribute="height" multiplier="6:11" id="Lgg-J4-0kM"/>
                                             <constraint firstAttribute="bottom" secondItem="1Nq-pp-VVN" secondAttribute="bottom" constant="5" id="RgZ-Mc-NhH"/>
+                                            <constraint firstItem="zvc-wO-YQd" firstAttribute="width" secondItem="fIa-16-P9k" secondAttribute="height" multiplier="55:126" id="VEF-dW-SIM"/>
+                                            <constraint firstItem="mR9-G7-adt" firstAttribute="top" secondItem="wa6-eY-nVB" secondAttribute="bottom" constant="5" id="bgE-bg-m2t"/>
                                             <constraint firstItem="MuR-Of-FH9" firstAttribute="centerY" secondItem="1Nq-pp-VVN" secondAttribute="centerY" id="eqJ-LP-YKs"/>
-                                            <constraint firstAttribute="width" secondItem="zvc-wO-YQd" secondAttribute="height" multiplier="32:15" id="fpf-68-qkn"/>
                                             <constraint firstItem="MuR-Of-FH9" firstAttribute="height" secondItem="1Nq-pp-VVN" secondAttribute="height" id="g4t-48-vbS"/>
                                             <constraint firstAttribute="trailing" secondItem="wa6-eY-nVB" secondAttribute="trailing" constant="5" id="lPo-hc-UL3"/>
-                                            <constraint firstItem="1Nq-pp-VVN" firstAttribute="top" relation="greaterThanOrEqual" secondItem="wa6-eY-nVB" secondAttribute="bottom" constant="5" id="lva-0g-Ppf"/>
                                             <constraint firstItem="MuR-Of-FH9" firstAttribute="leading" secondItem="1Nq-pp-VVN" secondAttribute="trailing" constant="8" id="nca-wr-Btl"/>
+                                            <constraint firstAttribute="width" secondItem="zvc-wO-YQd" secondAttribute="height" multiplier="144:55" id="qNe-VU-8Gb"/>
+                                            <constraint firstItem="1Nq-pp-VVN" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="MoA-kD-7UU" secondAttribute="top" constant="5" id="rwZ-uf-LD7"/>
+                                            <constraint firstItem="mR9-G7-adt" firstAttribute="leading" secondItem="fIa-16-P9k" secondAttribute="leading" constant="5" id="wDc-MW-8wY"/>
+                                            <constraint firstItem="MoA-kD-7UU" firstAttribute="leading" secondItem="fIa-16-P9k" secondAttribute="leading" constant="5" id="wQI-Mg-WOA"/>
                                             <constraint firstItem="zvc-wO-YQd" firstAttribute="centerX" secondItem="fIa-16-P9k" secondAttribute="centerX" id="xjZ-z1-mWW"/>
+                                            <constraint firstAttribute="trailing" secondItem="mR9-G7-adt" secondAttribute="trailing" constant="5" id="y6r-9G-9jC"/>
+                                            <constraint firstItem="MoA-kD-7UU" firstAttribute="top" secondItem="mR9-G7-adt" secondAttribute="bottom" constant="5" id="z0F-eX-igz"/>
                                             <constraint firstItem="wa6-eY-nVB" firstAttribute="top" secondItem="zvc-wO-YQd" secondAttribute="bottom" constant="8" id="zbn-ES-ZI2"/>
                                             <constraint firstItem="1Nq-pp-VVN" firstAttribute="leading" secondItem="fIa-16-P9k" secondAttribute="leading" constant="5" id="zjH-f0-ZiL"/>
                                         </constraints>
@@ -195,10 +279,10 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="fIa-16-P9k" firstAttribute="top" secondItem="Y0U-bL-O9D" secondAttribute="top" constant="10" id="5RP-GZ-3y4"/>
-                                    <constraint firstItem="fIa-16-P9k" firstAttribute="leading" secondItem="Y0U-bL-O9D" secondAttribute="leading" constant="10" id="fc5-ff-y0H"/>
-                                    <constraint firstAttribute="trailing" secondItem="fIa-16-P9k" secondAttribute="trailing" constant="10" id="hLh-ox-sJ1"/>
-                                    <constraint firstAttribute="bottom" secondItem="fIa-16-P9k" secondAttribute="bottom" constant="10" id="ssZ-vt-pml"/>
+                                    <constraint firstItem="fIa-16-P9k" firstAttribute="top" secondItem="Y0U-bL-O9D" secondAttribute="top" constant="8" id="5RP-GZ-3y4"/>
+                                    <constraint firstItem="fIa-16-P9k" firstAttribute="leading" secondItem="Y0U-bL-O9D" secondAttribute="leading" constant="8" id="fc5-ff-y0H"/>
+                                    <constraint firstAttribute="trailing" secondItem="fIa-16-P9k" secondAttribute="trailing" constant="8" id="hLh-ox-sJ1"/>
+                                    <constraint firstAttribute="bottom" secondItem="fIa-16-P9k" secondAttribute="bottom" constant="8" id="ssZ-vt-pml"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="backgroundCode">
@@ -230,11 +314,15 @@
                 <outlet property="KVKLeftView" destination="Byh-3P-d6x" id="C5h-Hb-N7p"/>
                 <outlet property="KVKRightView" destination="fIa-16-P9k" id="LHh-Ci-naE"/>
                 <outlet property="leftAgeLbl" destination="iiO-3H-7EM" id="gFv-iV-Cmi"/>
+                <outlet property="leftFriendsLbl" destination="4xf-lu-EaK" id="oPZ-kt-dWv"/>
                 <outlet property="leftHairColorView" destination="aOJ-Am-xel" id="Pnw-mm-kMA"/>
+                <outlet property="leftJobsLbl" destination="Oxh-JF-hOv" id="nbj-jT-8lz"/>
                 <outlet property="leftNameLbl" destination="WHK-mH-d6p" id="yBa-wi-x0U"/>
                 <outlet property="leftProfileImageView" destination="J0k-GA-yRa" id="V5m-4p-HFW"/>
                 <outlet property="rightAgeLbl" destination="MuR-Of-FH9" id="7W7-5V-C0R"/>
+                <outlet property="rightFriendsLbl" destination="MoA-kD-7UU" id="YqN-bJ-HZt"/>
                 <outlet property="rightHairColorView" destination="1Nq-pp-VVN" id="MUY-LE-RGf"/>
+                <outlet property="rightJobsLbl" destination="mR9-G7-adt" id="Y5a-hE-kzI"/>
                 <outlet property="rightNameLbl" destination="wa6-eY-nVB" id="BSY-LS-73l"/>
                 <outlet property="rightProfileImageView" destination="zvc-wO-YQd" id="oQR-ef-qGe"/>
             </connections>

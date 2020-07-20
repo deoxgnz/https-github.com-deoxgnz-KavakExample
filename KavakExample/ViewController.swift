@@ -14,6 +14,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.isNavigationBarHidden = true
+        //self.view.isUserInteractionEnabled = false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -22,16 +25,17 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func nextAction(_ sender: Any) {
+        getGnomesList()
+    }
+    
+    private func getGnomesList(){
         guard let url = URL(string: "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json") else { return }
         URLSession.shared.dataTask(with: url) { (data,response,error) in
             guard error == nil else {
+                self.showAlert(message: error?.localizedDescription)
                 return
             }
-
-            guard let data = data else {
-                return
-            }
-
+            guard let data = data else { return }
             do {
                 //create json object from data
                 if let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] {
@@ -40,17 +44,17 @@ class ViewController: UIViewController {
                         if let dctBrastlewark = json["Brastlewark"] as? [[String:Any]] {
                             let gnomes = self.getGnomeArray(dct: dctBrastlewark)
                             print("#gnomes: \(gnomes.count)")
-                            self.arrGnome = [gnomes[0], gnomes[1], gnomes[2]]
+                            //self.arrGnome = [gnomes[0], gnomes[1], gnomes[2]]
                             //self.arrGnome = [gnomes[0], gnomes[1], gnomes[2], gnomes[3], gnomes[4], gnomes[5], gnomes[6]]
+                            self.arrGnome = [gnomes[0], gnomes[1], gnomes[2], gnomes[3], gnomes[4], gnomes[5], gnomes[6], gnomes[7], gnomes[8], gnomes[9], gnomes[10], gnomes[11], gnomes[12], gnomes[13], gnomes[14]]
                             self.performSegue(withIdentifier: "segueToGnomeList", sender: self)
                         }
                     }
                 }
             } catch let error {
-                print(error.localizedDescription)
+                self.showAlert(message: error.localizedDescription)
             }
         }.resume()
-        
     }
     
     private func getGnomeArray(dct: [[String: Any]]) -> [Gnome] {
@@ -93,6 +97,16 @@ class ViewController: UIViewController {
         }
         
         return gnome
+    }
+    func showAlert(title: String? = "UPS", message: String?, actionTitle: String = "OK", actionHandler: ((UIAlertAction) -> Void)? = nil) {
+        let alert = UIAlertController(title          : title,
+                                      message        : message,
+                                      preferredStyle : .alert)
+        
+        alert.addAction(UIAlertAction(title   : actionTitle,
+                                      style   : .default,
+                                      handler : actionHandler))
+        self.present(alert, animated: true)
     }
     
 }

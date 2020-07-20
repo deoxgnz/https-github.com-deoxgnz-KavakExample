@@ -12,6 +12,8 @@ public enum ColorStyle: Int {
     case KVKGray            //5
     case KVKGnomeBG         //6
     case KVKCell            //7
+    case KVKBlack           //8
+    case KVKWhite           //9
     
     public var color : UIColor {
         switch self {
@@ -31,6 +33,10 @@ public enum ColorStyle: Int {
                 return .KVKGnomeBG
             case .KVKCell:
                 return .KVKCell
+            case .KVKBlack:
+                return .KVKBlack
+            case .KVKWhite:
+                return .KVKWhite
         }
     }
     
@@ -40,9 +46,9 @@ public enum ColorStyle: Int {
     static public func colorWith(stringValue value: String) -> Int {
         switch value.lowercased() {
             case "black":
-                return ColorStyle.KVKBlackSystem.rawValue
+                return ColorStyle.KVKBlack.rawValue
             case "white":
-                return ColorStyle.KVKWhiteSystem.rawValue
+                return ColorStyle.KVKWhite.rawValue
             case "pink":
                 return ColorStyle.KVKPink.rawValue
             case "green":
@@ -75,7 +81,7 @@ public extension UIColor {
     static var KVKWhiteSystem: UIColor{
         get{
             if #available(iOS 11.0, *) {
-                return UIColor(named: "KVKBlackSystem") ?? UIColor.clear
+                return UIColor(named: "KVKWhiteSystem") ?? UIColor.clear
             } else {
                 return UIColor.white
             }
@@ -132,6 +138,24 @@ public extension UIColor {
                 return UIColor(named: "KVKCell") ?? UIColor.clear
             } else {
                 return UIColor.getKVKCell()
+            }
+        }
+    }
+    static var KVKBlack: UIColor{
+        get{
+            if #available(iOS 11.0, *) {
+                return UIColor(named: "KVKBlack") ?? UIColor.clear
+            } else {
+                return UIColor.black
+            }
+        }
+    }
+    static var KVKWhite: UIColor{
+        get{
+            if #available(iOS 11.0, *) {
+                return UIColor(named: "KVKWhite") ?? UIColor.clear
+            } else {
+                return UIColor.white
             }
         }
     }

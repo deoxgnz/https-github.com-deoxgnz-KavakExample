@@ -31,12 +31,6 @@ class ViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? TestTableViewController {
-            destination.arrGnomes = self.arrGnomes
-        }
-    }
-    
     private func setViews(){
         setXibs()
         srcBar.delegate = self
@@ -164,6 +158,21 @@ class ViewController: UIViewController {
         self.present(alert, animated: true)
     }
     
+    @objc func showDetail(_ sender: Any?){
+        if let gesture = sender as? UITapGestureRecognizer,
+           let KVKView = gesture.view as? KVKView {
+            print("tag: \(KVKView.tag)")
+            let detailVC = GnomeDetailViewController()
+            let gnome = isSearch ? arrFilterGnomes[KVKView.tag] : arrGnomes[KVKView.tag]
+            detailVC.gnome = gnome
+            if let imagePath = gnome.strThumbnail,
+               let image = self.imageLoader.cache.object(forKey: imagePath as NSString) {
+                detailVC.gnomeImage = image
+            }
+            detailVC.modalPresentationStyle = .popover
+            present(detailVC, animated: true)
+        }
+    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -187,6 +196,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             cell.leftProfileImageView.image = image
         }
         
+        cell.KVKLeftView.tag = row
+        cell.KVKLeftView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showDetail(_:))))
+        
         if hasRightView(row: indexPath.row) {
             let rightData = isSearch ? self.arrFilterGnomes[row + 1] : self.arrGnomes[row + 1]
             cell.setRightView(name      : rightData.strName,
@@ -197,6 +209,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             imageLoader.obtainImageWithPath(imagePath: rightData.strThumbnail) { (image) in
                 cell.rightProfileImageView.image = image
             }
+            cell.KVKRightView.tag = row + 1
+            cell.KVKRightView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showDetail(_:))))
         } else {
             cell.KVKRightView.alpha = 0.0
         }

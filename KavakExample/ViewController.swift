@@ -5,11 +5,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+    //MARK: - IBOutlet
     @IBOutlet weak var srcBar: UISearchBar!
     @IBOutlet weak var gnomeTbl: UITableView!
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     
+    //MARK: - Private var
     private var isSearch: Bool = false
     private var arrGnomes = [Gnome]()
     private var arrFilterGnomes = [Gnome]()
@@ -18,7 +19,8 @@ class ViewController: UIViewController {
     private var numberOfRows : Int {
         return isSearch ? (self.arrFilterGnomes.count / 2) + (self.arrFilterGnomes.count % 2) : (self.arrGnomes.count / 2) + (self.arrGnomes.count % 2)
     }
-
+    
+    //MARK: - Cycle Funcs
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +33,7 @@ class ViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
     }
     
+    //MARK: - Private Funcs
     private func setViews(){
         setXibs()
         srcBar.delegate = self
@@ -44,6 +47,7 @@ class ViewController: UIViewController {
         gnomeTbl.register(UINib(nibName: KVKMosaicCell.identifier, bundle: nil), forCellReuseIdentifier: KVKMosaicCell.identifier)
     }
     
+    //MARK: - Indicator Funcs
     private func startIndicator(){
         self.view.isUserInteractionEnabled = false
         self.gnomeTbl.isHidden = true
@@ -56,6 +60,7 @@ class ViewController: UIViewController {
         self.indicator.isHidden = true
     }
     
+    //MARK: - Gnome Funcs
     private func getGnomeData(){
         startIndicator()
         getGnomesList()
@@ -147,17 +152,7 @@ class ViewController: UIViewController {
         
         return gnome
     }
-    func showAlert(title: String? = "UPS!!", message: String?, actionTitle: String = "OK", actionHandler: ((UIAlertAction) -> Void)? = nil) {
-        let alert = UIAlertController(title          : title,
-                                      message        : message,
-                                      preferredStyle : .alert)
-        
-        alert.addAction(UIAlertAction(title   : actionTitle,
-                                      style   : .default,
-                                      handler : actionHandler))
-        self.present(alert, animated: true)
-    }
-    
+    //MARK: - @objc funcs
     @objc func showDetail(_ sender: Any?){
         if let gesture = sender as? UITapGestureRecognizer,
            let KVKView = gesture.view as? KVKView {
@@ -173,8 +168,20 @@ class ViewController: UIViewController {
             present(detailVC, animated: true)
         }
     }
+    
+    //MARK: - Other Funcs
+    func showAlert(title: String? = "UPS!!", message: String?, actionTitle: String = "OK", actionHandler: ((UIAlertAction) -> Void)? = nil) {
+        let alert = UIAlertController(title          : title,
+                                      message        : message,
+                                      preferredStyle : .alert)
+        
+        alert.addAction(UIAlertAction(title   : actionTitle,
+                                      style   : .default,
+                                      handler : actionHandler))
+        self.present(alert, animated: true)
+    }
 }
-
+//MARK: - Extension UITableView
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int { return 1 }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { return numberOfRows }
@@ -217,7 +224,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 }
-
+//MARK: - UISearchBarDelegate
 extension ViewController: UISearchBarDelegate {
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         arrFilterGnomes = arrGnomes
@@ -240,7 +247,7 @@ extension ViewController: UISearchBarDelegate {
         self.gnomeTbl.reloadData()
     }
 }
-
+//MARK: - UITableViewCell
 extension UITableViewCell {
     class var identifier: String { return String(describing: self) }
 }

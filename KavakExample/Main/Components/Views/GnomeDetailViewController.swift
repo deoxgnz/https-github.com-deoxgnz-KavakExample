@@ -5,10 +5,7 @@
 import UIKit
 
 class GnomeDetailViewController: UIViewController {
-    
-    public var gnome: Gnome?
-    public var gnomeImage: UIImage?
-    
+    //MARK: - IBOutlet
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var nameLbl: KVKLabel!
     
@@ -20,13 +17,17 @@ class GnomeDetailViewController: UIViewController {
     @IBOutlet weak var professionLbl: KVKLabel!
     @IBOutlet weak var friendsLbl: KVKLabel!
     
+    //MARK: - Public var
+    public var gnome: Gnome?
+    public var gnomeImage: UIImage?
+    //MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setGnomeData()
     }
 
-
+    //MARK: - Gnome Funcs
     func setGnomeData(){
         if let image = self.gnomeImage {
             self.profileImg.image = image
@@ -66,8 +67,7 @@ class GnomeDetailViewController: UIViewController {
         }
         return friends
     }
-    
-    
+    //MARK: - IBAction
     @IBAction func closeAction(_ sender: Any) {
         self.dismiss(animated: true)
     }
